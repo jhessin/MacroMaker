@@ -1,0 +1,27 @@
+# This project was generated with 0.3.20 using template: https://github.com/beeware/briefcase-template@v0.3.20
+[tool.briefcase]
+project_name = "Macro Maker"
+bundle = "com.grillbrickstudios"
+version = "0.0.1"
+url = "https://grillbrickstudios.com/macromaker"
+license.file = "LICENSE"
+author = "Jim Hessin"
+author_email = "jhessin@gmail.com"
+
+[tool.briefcase.app.macromaker]
+formal_name = "Macro Maker"
+description = "A utility for managing keybinds and macros."
+long_description = """More details about the app should go here.
+"""
+sources = [
+    "src/macromaker",
+]
+requires = [
+    'keyboard',
+    'mouse',
+    'wxpython',
+]
+test_sources = [
+    "tests",
+]
+
