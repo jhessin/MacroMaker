@@ -4,8 +4,7 @@ A utility for managing keybinds and macros.
 
 import keyboard
 import wx
-from macromaker.Floating_Window import Floating_Window
-
+from macromaker.CommandBox import CommandBox
 
 
 def main():
@@ -13,7 +12,7 @@ def main():
     app = wx.App()
 
     # Then a frame.
-    frm = Floating_Window()
+    frm = CommandBox()
 
     # Show it.
     def show_frame():
@@ -21,9 +20,9 @@ def main():
         # frm.SetFocus()
         frm.SetFocusFromKbd()
 
-    # keyboard.add_hotkey("ctrl + t", show_frame)
+    keyboard.add_hotkey("ctrl + t", show_frame)
     # keyboard.add_hotkey(":", show_frame)
-    frm.Show()
+    # frm.Show()
 
     # Start the event loop.
     app.MainLoop()
